@@ -8,7 +8,7 @@ export const authMiddleware = (req, res, next) => {
   }
 
   try {
-    const decoded = verifyToken(token)
+    const decoded = verifyToken(token) // Verifica el token
     req.user = decoded
     next()
   } catch (error) {
